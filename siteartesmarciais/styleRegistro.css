@@ -1,0 +1,143 @@
+body{
+    background-color: #525252;
+}
+
+*{
+    font-family: bebasNeue;
+}
+
+.containerUnidades{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 70px calc(100% - 70px);
+}
+
+.imagemBackground{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    width: 100%;
+	height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -100;
+    mix-blend-mode: multiply;
+}
+
+.containerApenasUnidades{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+    grid-template-columns: 50px calc(100% - 100px) 50px;
+
+    width: 80%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+}
+
+.botaoSeta{
+    width: 50px;
+    height: 50px;
+
+    align-self: center;
+    background-image: none;
+    transition: 0.5s;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.botaoDireita{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    transform: rotateZ(180deg);
+}
+
+.botaoEsquerda{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.containerImagemTexto{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+    display: grid;
+
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    border: none;
+    box-shadow: none;
+    z-index: 2;
+    background-size: cover;
+    background-position: center center;
+    transition: 1s;
+}
+
+.containerTextoUnidade{
+    width: 500px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ff2828;
+    border-radius: 10px;
+
+    align-self: center;
+    justify-self: center;
+}
+
+.textoUnidade{
+    font-size: 25px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.divisaoTextosUnidade{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    text-align: center;
+}
+
+.inativo{
+    /* display: none; */
+    opacity: 0;
+}
+
+.caixaRegistro{
+	width: 300px;
+	height: 30px;
+	align-self: center;
+	justify-self: center;
+
+	border: 1px solid #ff3838;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+
+	color: #fff;
+	font-family: bebasNeue;
+    font-size: 20px;
+}
+
+.caixaRegistro::placeholder{
+    color:rgb(196, 196, 196)
+}
